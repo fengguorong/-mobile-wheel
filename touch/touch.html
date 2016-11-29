@@ -46,7 +46,7 @@ img{
 			})
 		})
 		touch.on("body","dragend",".box",function(e){
-			if(Math.abs(e.x)>100){
+			if(Math.abs(e.x)>200){
 				if(e.direction=="left"){
 					num++;
 					if(num==$("img").length){
@@ -63,8 +63,9 @@ img{
 					transition:"margin 1s ease"
 				})
 			}else{
+				// alert(num)
 				$(".box").css({
-					marginLeft:num*widths,
+					marginLeft:-num*widths,
 					transition:"margin-left 1s ease"
 				})
 			}
