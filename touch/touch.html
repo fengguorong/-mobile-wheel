@@ -20,14 +20,19 @@ img{
 }
 
 	</style>
-	<script>
+<script>
 	window.onload=function(){
 		var widths=document.documentElement.clientWidth;
 		var heights=document.documentElement.clientHeight;
 		var marginL=0;
 		var num=0;
-
-		$(".box").css({"width":5*widths+"px","height":heights+"px"})
+        $(".wheel").mousedown(function(e){
+			e.preventDefault();
+        })
+        $(".wheel").mousemove(function(e){
+			e.preventDefault();
+        })	
+		$(".box").css({"width":5*widths+"px","height":heights+"px"});
 		$("img").css({"width":widths+"px"});
 		touch.on("body","dragstart",".box",function(e){
 			$(".box").css({
@@ -65,8 +70,7 @@ img{
 			}
 		})
 	}
-
-	</script>
+</script>
 </head>
 <body>
     <div class="wheel">
